@@ -1,5 +1,7 @@
 # Castle-Blaze
 
+Descargar: https://jeflh.itch.io/castle-blaze
+
 ### Menu principal
 ![image](https://github.com/Jeflh/Castle-Blaze/assets/88942550/7226d4bc-dee4-4c12-8d03-45adae7bd0bc)
 
