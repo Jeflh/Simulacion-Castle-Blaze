@@ -8,7 +8,11 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private int Life = 3;
     [SerializeField] private float Speed;
     [SerializeField] private int Strong;
-    [SerializeField] private Joystick joystick;
+
+    [SerializeField] private Joystick floatingJoystick;
+    [SerializeField] private Joystick fixedJoystick;
+    private Joystick joystick;
+
     [SerializeField] private EnemysController enemysController;
     [SerializeField] private GameObject MagicPrefab;
     [SerializeField] private GameObject[] Hearts;
@@ -20,6 +24,7 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private DatabaseManager databaseManager;
+    [SerializeField] private OptionsMenu optionsMenu;
 
     public event EventHandler deathPlayer;
 
@@ -103,9 +108,21 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+        int joystickPreference = optionsMenu.LoadJoystickPreference();
+
+        if (joystickPreference == 1)
+        {
+            fixedJoystick.gameObject.SetActive(true);
+            joystick = fixedJoystick;
+        }
+        else
+        {
+            floatingJoystick.gameObject.SetActive(true);
+            joystick = floatingJoystick;
+        }
+
         MoveX = Mathf.Round(joystick.Horizontal);
         MoveY = Mathf.Round(joystick.Vertical);
-
         MoveInput = new Vector2(MoveX, MoveY).normalized;
 
         PlayerAnimator.SetFloat("Horizontal", MoveX);

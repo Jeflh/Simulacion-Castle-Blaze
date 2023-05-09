@@ -7,7 +7,8 @@ using System;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private GameObject menuGameOver;
-    [SerializeField] private GameObject joystick;
+    [SerializeField] private Joystick floatingJoystick;
+    [SerializeField] private Joystick fixedJoystick;
     [SerializeField] private GameObject shootButton;
     [SerializeField] private GameObject pauseButton;
     private PlayerScript playerScript;
@@ -22,7 +23,8 @@ public class GameOverMenu : MonoBehaviour
     {
         menuGameOver.SetActive(true);
         shootButton.SetActive(false);
-        joystick.SetActive(false);
+        floatingJoystick.gameObject.SetActive(false);
+        fixedJoystick.gameObject.SetActive(false);
         pauseButton.SetActive(false);
     }
 
