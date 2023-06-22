@@ -271,6 +271,8 @@ MonoBehaviour:
   music: {fileID: 24100000, guid: 4e041618dd371304fa972d9bce991118, type: 2}
   fx: {fileID: 24100000, guid: 834ab602c30358f4b9f9ace625ebc40c, type: 2}
   JoystickToggle: {fileID: 1269627153}
+  fxSlider: {fileID: 1194860960}
+  musicSlider: {fileID: 1382960628}
 --- !u!82 &1798867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -823,7 +825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f04bd5235516ac841be9f1c44192762b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fe14cc34e1bc5d40a2ab8b6b3fc264a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8989,7 +8991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 448, y: -223}
+  m_AnchoredPosition: {x: 678, y: -245}
   m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1326195830
@@ -9729,7 +9731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: -225}
+  m_AnchoredPosition: {x: -680, y: -244}
   m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429305839
@@ -9752,7 +9754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f04bd5235516ac841be9f1c44192762b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fe14cc34e1bc5d40a2ab8b6b3fc264a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

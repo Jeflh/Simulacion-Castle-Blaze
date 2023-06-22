@@ -15,7 +15,7 @@ Descargar: https://jeflh.itch.io/castle-blaze
 ![image](https://github.com/Jeflh/Castle-Blaze/assets/88942550/13199c7f-2f86-47d3-baa8-c7602bbd890a)
 
 ### Opciones
-![image](https://github.com/Jeflh/Castle-Blaze/assets/88942550/3114691b-3e58-494d-8158-01d21e6d0189)
+![image](https://github.com/Jeflh/Castle-Blaze/assets/88942550/dad57354-8194-4250-ac13-5c898aefc62b)
 
 
 ### Creditos

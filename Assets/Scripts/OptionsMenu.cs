@@ -11,10 +11,33 @@ public class OptionsMenu : MonoBehaviour
 
     public Toggle JoystickToggle;
 
-    private void Awake()
+    [SerializeField] private Slider fxSlider;
+    [SerializeField] private Slider musicSlider;
+
+    private const string fxKey = "FXVolume";
+    private const string musicKey = "MusicVolume";
+
+
+    public void Start()
     {
         try
         {
+            // Recuperar valores de volumen al iniciar el juego
+            if (PlayerPrefs.HasKey("MusicVolume"))
+            {
+                float musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+                music.SetFloat("Music", musicVolume);
+            }
+
+            if (PlayerPrefs.HasKey("FXVolume"))
+            {
+                float fxVolume = PlayerPrefs.GetFloat("FXVolume");
+                fx.SetFloat("FX", fxVolume);
+            }
+
+            fxSlider.value = getVolumenFX();
+            musicSlider.value = getVolumenMusic();
+
             // Cargar el valor de la preferencia "joystickPreference"
             int joystickPref = PlayerPrefs.GetInt("joystickPreference", 0);
 
@@ -27,16 +50,32 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
+    public void setVolumenFX(float volumen)
+    {
+        fx.SetFloat("FX", volumen);
+        PlayerPrefs.SetFloat("FXVolume", volumen);
+    }
 
     public void setVolumenMusic(float volumen)
     {
         music.SetFloat("Music", volumen);
+        PlayerPrefs.SetFloat("MusicVolume", volumen);
     }
 
-    public void setVolumenFX(float volumen)
+    public float getVolumenFX()
     {
-        fx.SetFloat("FX", volumen);
+        float fxVolume = 0f;
+        fx.GetFloat("FX", out fxVolume);
+        return fxVolume;
     }
+
+    public float getVolumenMusic()
+    {
+        float musicVolume = 0f;
+        music.GetFloat("Music", out musicVolume);
+        return musicVolume;
+    }
+
 
     public void SavePlayerName(string playerName)
     {

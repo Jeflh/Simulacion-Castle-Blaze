@@ -79,7 +79,11 @@ public class PlayerScript : MonoBehaviour
 
         if (enemysController.GetRound() != currentRound) // Reset de la UI de Vida
         {
+            // Establecer la invulnerabilidad del jugador
+            isInvulnerable = true;
 
+            // Después de un tiempo, el jugador ya no es invulnerable
+            StartCoroutine(ResetInvulnerability(invulnerabilityTime + 0.5f));
             if (currentRound != 0) SoundsController.Instance.PlaySound(levelUp);
 
             if (enemysController.GetRound() % 3 == 0 && Speed < 6)
